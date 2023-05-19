@@ -1,5 +1,6 @@
 import React from 'react';
-import toursData from './data.json';
+import toursData from '../../data/db.json';
+
 
 function Tours() {
   return (

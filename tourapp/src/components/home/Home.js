@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from '../header/Header';
 import Tours from '../tours/Tours';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
-function Home() {
+const Home = () => {
   return (
     <div className="home">
-      <Header />
-      <Tours />
-    </div>
+
+     <Header/> 
+      <Tours/>
+      <Footer/>
+</div>
   );
-}
+};
 
 export default Home;
