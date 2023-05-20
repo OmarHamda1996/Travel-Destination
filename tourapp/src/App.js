@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
-import Home from './components/home/Home'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/home/Home';
+import TourDetails from './components/TourDetails/TourDetails';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-   <Home/>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/city/:id" component={TourDetails} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
