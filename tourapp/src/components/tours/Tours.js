@@ -1,18 +1,17 @@
 import React from 'react';
-import toursData from '../../data/db.json';
+import Tour from './tour/Tour'
+import tourData from '../../data/db.json';
 
 
-function Tours() {
+
+const Tours = () => {
   return (
     <div>
-      {toursData.map((tour, index) => (
-        <div key={index}>
-          <h3>{tour.name}</h3>
-          <img src={tour.image} alt={tour.name} />
-        </div>
+      {tourData.map(tour => (
+        <Tour key={tour.id} tour={tour} />
       ))}
     </div>
   );
-}
+};
 
 export default Tours;
